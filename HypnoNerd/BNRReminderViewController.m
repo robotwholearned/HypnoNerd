@@ -36,4 +36,14 @@
     }
     return self;
 }
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"BNRReminderViewController did load its view");
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.datepicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
+}
 @end

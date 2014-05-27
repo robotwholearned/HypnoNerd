@@ -32,4 +32,9 @@
     }
     return self;
 }
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"BNRHypnosisViewController did load its view");
+}
 @end
