@@ -30,6 +30,9 @@
 }
 - (BOOL)textFieldShouldReturn:(UITextField*)textField
 {
+    [self drawHypnoticMessage:textField.text];
+    textField.text = @"";
+    [textField resignFirstResponder];
     return YES;
 }
 - (instancetype)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
@@ -46,5 +49,27 @@
 {
     [super viewDidLoad];
     NSLog(@"BNRHypnosisViewController did load its view");
+}
+- (void)drawHypnoticMessage:(NSString*)message
+{
+    for (int i = 0; i < 20; i++) {
+        UILabel* messageLabel = [[UILabel alloc] init];
+        messageLabel.backgroundColor = [UIColor clearColor];
+        messageLabel.textColor = [UIColor whiteColor];
+        messageLabel.text = message;
+        [messageLabel sizeToFit];
+
+        int width = self.view.bounds.size.width - messageLabel.bounds.size.width;
+        int x = arc4random() % width;
+
+        int height = self.view.bounds.size.height - messageLabel.bounds.size.height;
+        int y = arc4random() % height;
+
+        CGRect frame = messageLabel.frame;
+        frame.origin = CGPointMake(x, y);
+        ;
+        messageLabel.frame = frame;
+        [self.view addSubview:messageLabel];
+    }
 }
 @end
