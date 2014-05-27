@@ -8,6 +8,17 @@
 
 #import "BNRReminderViewController.h"
 
+@interface BNRReminderViewController ()
+
+@property (nonatomic, weak) IBOutlet UIDatePicker* datepicker;
+
+@end
+
 @implementation BNRReminderViewController
 
+- (IBAction)addReminder:(id)sender
+{
+    NSDate* date = self.datepicker.date;
+    NSLog(@"Set a reminder for: %@", date);
+}
 @end
