@@ -21,4 +21,15 @@
     BNRHypnosisView* backgroundView = [[BNRHypnosisView alloc] initWithFrame:frame];
     self.view = backgroundView;
 }
+
+- (instancetype)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
+    if (self) {
+        self.tabBarItem.title = @"Hypnotize";
+        self.tabBarItem.image = [UIImage imageNamed:@"Hypno"];
+    }
+    return self;
+}
 @end
