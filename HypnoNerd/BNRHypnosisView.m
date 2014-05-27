@@ -19,8 +19,32 @@
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
         self.circleColor = [UIColor lightGrayColor];
+        UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:@[
+                                                                                            @"redColor",
+                                                                                            @"greenColor",
+                                                                                            @"blueColor"
+                                                                                         ]];
+        segmentedControl.frame = self.frame;
+
+        [segmentedControl addTarget:self
+                             action:@selector(segementedControlSelected:)
+                   forControlEvents:UIControlEventValueChanged];
+        [self addSubview:segmentedControl];
     }
     return self;
+}
+- (void)segementedControlSelected:(id)sender
+{
+    NSLog(@"segment selected %@", sender);
+    UISegmentedControl* segmentedControl = (UISegmentedControl*)sender;
+    NSLog(@"%@", [segmentedControl titleForSegmentAtIndex:[segmentedControl selectedSegmentIndex]]);
+    self.circleColor = [self giveColorfromStringColor:[segmentedControl titleForSegmentAtIndex:[segmentedControl selectedSegmentIndex]]];
+}
+- (UIColor*)giveColorfromStringColor:(NSString*)colorname
+{
+    SEL labelColor = NSSelectorFromString(colorname);
+    UIColor* color = [UIColor performSelector:labelColor];
+    return color;
 }
 
 /*
