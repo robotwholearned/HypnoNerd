@@ -20,6 +20,7 @@
 		E3B925A419345A34003F7E00 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3B925A219345A34003F7E00 /* InfoPlist.strings */; };
 		E3B925A619345A34003F7E00 /* HypnoNerdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B925A519345A34003F7E00 /* HypnoNerdTests.m */; };
 		E3B925B119345A79003F7E00 /* BNRHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B925B019345A79003F7E00 /* BNRHypnosisView.m */; };
+		E3B925B419345AC1003F7E00 /* BNRHypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B925B319345AC1003F7E00 /* BNRHypnosisViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		E3B925A519345A34003F7E00 /* HypnoNerdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnoNerdTests.m; sourceTree = "<group>"; };
 		E3B925AF19345A79003F7E00 /* BNRHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisView.h; sourceTree = "<group>"; };
 		E3B925B019345A79003F7E00 /* BNRHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisView.m; sourceTree = "<group>"; };
+		E3B925B219345AC1003F7E00 /* BNRHypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisViewController.h; sourceTree = "<group>"; };
+		E3B925B319345AC1003F7E00 /* BNRHypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				E3B9259019345A34003F7E00 /* BNRAppDelegate.m */,
 				E3B925AF19345A79003F7E00 /* BNRHypnosisView.h */,
 				E3B925B019345A79003F7E00 /* BNRHypnosisView.m */,
+				E3B925B219345AC1003F7E00 /* BNRHypnosisViewController.h */,
+				E3B925B319345AC1003F7E00 /* BNRHypnosisViewController.m */,
 				E3B9259219345A34003F7E00 /* Images.xcassets */,
 				E3B9258719345A34003F7E00 /* Supporting Files */,
 			);
@@ -245,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B925B419345AC1003F7E00 /* BNRHypnosisViewController.m in Sources */,
 				E3B9258D19345A34003F7E00 /* main.m in Sources */,
 				E3B9259119345A34003F7E00 /* BNRAppDelegate.m in Sources */,
 				E3B925B119345A79003F7E00 /* BNRHypnosisView.m in Sources */,
