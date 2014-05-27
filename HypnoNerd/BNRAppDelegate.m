@@ -18,12 +18,17 @@
     // Override point for customization after application launch.
 
     BNRHypnosisViewController* hvc = [[BNRHypnosisViewController alloc] init];
-
     NSBundle* appBundle = [NSBundle mainBundle];
     BNRReminderViewController* rvc = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController"
                                                                                  bundle:appBundle];
 
-    self.window.rootViewController = rvc;
+    UITabBarController* tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[
+        hvc,
+        rvc
+    ];
+    self.window.rootViewController = tabBarController;
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
